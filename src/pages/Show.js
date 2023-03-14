@@ -1,6 +1,8 @@
 import React,{ useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import '../index.css';
+import Button from '@mui/material/Button';
+
 function Show(props) {
   const { id } = useParams()
   const journal = props.journal.find((journal) => journal._id === id)
@@ -64,10 +66,12 @@ function Show(props) {
         placeholder="note"
         onChange={handleChange}
       />
-      <input type="submit" value="Update Journal" />
-      <button id="delete" onClick={removeJournal}>
+       
+      <input id="update" type="submit" value="Update Journal" />
+
+      <Button variant="contained" id="delete" onClick={removeJournal}>
       DELETE
-    </button>
+      </Button>
     </form>
   </div>
 );

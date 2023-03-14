@@ -5,6 +5,7 @@ import '../index.css';
 // import { useSelector } from 'react-redux';
 
 
+
 function Index(props) {
   // const { id } = useParams()
   // const journal = props.journal.find((journal) => journal._id === id)
@@ -66,7 +67,7 @@ function Index(props) {
     <div>
      
       <form onSubmit={handleSubmit}>
-      <h3 id="logo">Create a log</h3>
+      <h2 id="logo">Create a log</h2>
         <input
           type="text"
           value={newForm.date}

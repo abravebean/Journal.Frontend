@@ -81,9 +81,9 @@ border: black;
   /* #card{
 
   } */
-  #delete{
-
-    
+  #delete,#update{
+    border-radius:10px;
+    height:25px;
  
     
   }
@@ -93,9 +93,14 @@ border: black;
   height: 20px;
 
 
-    
+  background:transparent;  
   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
   text-align: center;
 
   transition: all 0.2s ease-in-out;
+  }
+
+  input:hover{
+    height:40px;
+   
   }
