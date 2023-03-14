@@ -40,7 +40,7 @@ function Show(props) {
     <div className="journal">
     <h1>{journal.date}</h1>
     <h2>{journal.note}</h2>
-    <img src={journal.picture} alt={journal.picture} />
+    <img src={journal.picture} alt={journal.picture}/>
     <button id="delete" onClick={removeJournal}>
       DELETE
     </button>

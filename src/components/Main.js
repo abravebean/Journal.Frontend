@@ -12,6 +12,7 @@ function Main(props) {
   const getJournal = async () => {
     const response = await fetch(URL)
     const data = await response.json()
+    console.log(data);
     setJournal(data)
   }
 
@@ -37,7 +38,13 @@ function Main(props) {
       },
       body: JSON.stringify(journal)
     })
-
+    .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
     getJournal()
   }
 

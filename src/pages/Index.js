@@ -1,30 +1,40 @@
-import React,{ useState } from "react"
+import React,{ useState} from "react"
 import { Link } from 'react-router-dom'
 import '../index.css';
+// import { useSelector } from 'react-redux';
+
+
 function Index(props) {
   const [newForm, setNewForm] = useState({
     note: "",
     picture: "",
-    date: ""
+    date: "",
   })
+  // const post = useSelector((state) => (props ? state.posts.posts.find((journal) => journal._id === props) : null));
+  // // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   // if (!post?.name)
+  //   // if (post) handleChange(post);
+  // }, [post]);
+
 
   const loaded = () => {
     return props.journal.map((journal) => (
       <div key={journal._id} className="journal">
        <Link to={`/journal/${journal._id}`}>
-          <h1>{journal.date}</h1>
+          <a >{journal.date}</a>
         </Link>
 
-        <img src={journal.picture} alt={journal.picture} className="image"/>
-        <h3>{journal.note}</h3>
+        <img src={journal.picture} alt={journal.picture} className="image" />
+        <h3 >{journal.note}</h3>
       </div>
     ))
   }
-  
+    // handleChange 
   const handleChange = (event) => {
     setNewForm((prevState) => ({
       ...prevState,
-      [event.target.date]: event.target.value,
+      [event.target.note]: event.target.value,
     }))
   }
 
@@ -44,6 +54,7 @@ function Index(props) {
 
   return (
     <section>
+       <h3 id="logo">Create a log</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
