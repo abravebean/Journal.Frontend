@@ -1,15 +1,21 @@
 import React,{ useState} from "react"
 import { Link } from 'react-router-dom'
+// import { useParams, useNavigate } from "react-router-dom"
 import '../index.css';
 // import { useSelector } from 'react-redux';
 
 
 function Index(props) {
+  // const { id } = useParams()
+  // const journal = props.journal.find((journal) => journal._id === id)
+  // let navigate = useNavigate()
   const [newForm, setNewForm] = useState({
     note: "",
     picture: "",
     date: "",
   })
+  
+
   // const post = useSelector((state) => (props ? state.posts.posts.find((journal) => journal._id === props) : null));
   // // const dispatch = useDispatch();
   // useEffect(() => {
@@ -20,13 +26,16 @@ function Index(props) {
 
   const loaded = () => {
     return props.journal.map((journal) => (
-      <div key={journal._id} className="journal">
+      <div id="card" key={journal._id} className="journal">
        <Link to={`/journal/${journal._id}`}>
-          <a >{journal.date}</a>
+          <h3 >{journal.date}</h3>
         </Link>
 
+
+        <Link to={`/journal/${journal._id}`}>
         <img src={journal.picture} alt={journal.picture} className="image" />
-        <h3 >{journal.note}</h3>
+        </Link>
+        <h1 >{journal.note}</h1>
       </div>
     ))
   }
@@ -42,9 +51,10 @@ function Index(props) {
     event.preventDefault()
     props.createJournal(newForm)
     setNewForm({
-      date: "",
-      picture: "",
       note: "",
+     
+      picture: "",
+      date: "",
     })
   }
 
@@ -53,7 +63,7 @@ function Index(props) {
   }
 
   return (
-    <section>
+    <div>
        <h3 id="logo">Create a log</h3>
       <form onSubmit={handleSubmit}>
         <input
@@ -80,7 +90,7 @@ function Index(props) {
         <input type="submit" value="Create Journal" />
       </form>
       {props.journal ? loaded() : loading()}
-    </section>
+    </div>
   )
 }
 

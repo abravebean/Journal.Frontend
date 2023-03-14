@@ -6,6 +6,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+ 
+
   }
   
   code {
@@ -17,6 +19,12 @@ body {
     text-align: center;
     background-color: rgb(255, 255, 255);
     border: rgb(236, 0, 0);
+    background-image: url("https://img.freepik.com/premium-vector/notebook-line-squared-dot-diary-template-notepad-empty-page-set-vector-blank-white-list-mock-up_152104-1494.jpg?w=2000");
+    background-position: center;
+    background-size: contain;
+    background-position-y: -200px;
+background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   }
   
 img {
@@ -67,4 +75,14 @@ border: black;
    -ms-transition:0.2s ease all;
     -o-transition:0.2s ease all;
        transition:0.2s ease all;
+  }
+  #card{
+    border:2px solid rgb(0, 0, 0);
+    border-style: dotted
+  }
+  #delete{
+    max-width: 300px;
+    float: right;
+    left:200px;
+    
   }
