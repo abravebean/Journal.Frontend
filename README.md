@@ -1,7 +1,7 @@
 ## Diary APP
 This is a simple diary app that allows users to create and manage their personal diary entries. It is designed for users who want to keep a daily log of their thoughts, ideas, and experiences.
 
-##Features
+## Features
 - Create and save diary entries with a date and time stamp.
 - Edit and delete existing entries.
 - View all entries in a list or calendar view.
@@ -15,13 +15,13 @@ This is a simple diary app that allows users to create and manage their personal
 ![Alt text](diary.png)
 
 ### Technologies Used:
-React
-MongoDB
-Express
-Node.js
-Redux
-Redux thunk
-Material UI
+- React
+- MongoDB
+- Express
+- Node.js
+- Redux
+- Redux thunk
+- Material UI
 ### Future Enhancements:
 - Enhance styling
 - Better UI
