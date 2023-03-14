@@ -19,11 +19,13 @@ body {
     text-align: center;
     background-color: rgb(255, 255, 255);
     border: rgb(236, 0, 0);
-    background-image: url("https://img.freepik.com/premium-vector/notebook-line-squared-dot-diary-template-notepad-empty-page-set-vector-blank-white-list-mock-up_152104-1494.jpg?w=2000");
+    background-image: url("https://wallpaperaccess.com/full/4317844.jpg");
     background-position: center;
     background-size: contain;
     background-position-y: -200px;
-background-repeat: no-repeat; /* Do not repeat the image */
+    height:auto;
+    
+    background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   }
   
@@ -76,13 +78,24 @@ border: black;
     -o-transition:0.2s ease all;
        transition:0.2s ease all;
   }
-  #card{
-    border:2px solid rgb(0, 0, 0);
-    border-style: dotted
-  }
+  /* #card{
+
+  } */
   #delete{
-    max-width: 300px;
-    float: right;
-    left:200px;
+
     
+ 
+    
+  }
+  form,input{
+   
+
+  height: 20px;
+
+
+    
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+
+  transition: all 0.2s ease-in-out;
   }

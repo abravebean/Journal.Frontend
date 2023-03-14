@@ -27,9 +27,9 @@ function Index(props) {
   const loaded = () => {
     return props.journal.map((journal) => (
       <div id="card" key={journal._id} className="journal">
-       <Link to={`/journal/${journal._id}`}>
+     
           <h3 >{journal.date}</h3>
-        </Link>
+      
 
 
         <Link to={`/journal/${journal._id}`}>
@@ -43,7 +43,7 @@ function Index(props) {
   const handleChange = (event) => {
     setNewForm((prevState) => ({
       ...prevState,
-      [event.target.note]: event.target.value,
+      [event.target.name]: event.target.value,
     }))
   }
 
@@ -64,30 +64,31 @@ function Index(props) {
 
   return (
     <div>
-       <h3 id="logo">Create a log</h3>
+     
       <form onSubmit={handleSubmit}>
+      <h3 id="logo">Create a log</h3>
         <input
           type="text"
           value={newForm.date}
           name="date"
-          placeholder="date"
+          placeholder="Date"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.picture}
           name="picture"
-          placeholder="picture"
+          placeholder="Add a picture"
           onChange={handleChange}
         />
         <input
           type="text"
           value={newForm.note}
           name="note"
-          placeholder="note"
+          placeholder="notes"
           onChange={handleChange}
         />
-        <input type="submit" value="Create Journal" />
+        <input type="submit" value="Add Journal" />
       </form>
       {props.journal ? loaded() : loading()}
     </div>

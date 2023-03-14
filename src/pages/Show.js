@@ -41,9 +41,7 @@ function Show(props) {
     <h1>{journal.date}</h1>
     <h2>{journal.note}</h2>
     <img src={journal.picture} alt={journal.picture}/>
-    <button id="delete" onClick={removeJournal}>
-      DELETE
-    </button>
+    
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -67,6 +65,9 @@ function Show(props) {
         onChange={handleChange}
       />
       <input type="submit" value="Update Journal" />
+      <button id="delete" onClick={removeJournal}>
+      DELETE
+    </button>
     </form>
   </div>
 );
