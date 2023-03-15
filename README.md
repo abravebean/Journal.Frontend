@@ -13,7 +13,7 @@ This is a simple diary app that allows users to create and manage their personal
 - As a user I can update an entry
 - As a user I delete an entry
 ![Alt text](diary.png)
-
+![](journalfigma.png)
 ### Technologies Used:
 - React
 - MongoDB
