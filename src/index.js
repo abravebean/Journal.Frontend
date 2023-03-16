@@ -1,5 +1,5 @@
 import React from "react"
-import ReactDOM from "react-router-dom"
+import ReactDOM from "react-dom"
 // IMPORT SCSS FILE TO BE SOURCE OF STYLING
 
 // IMPORT ROUTER
