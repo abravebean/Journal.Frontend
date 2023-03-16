@@ -7,7 +7,7 @@ import Show from "../pages/Show"
 
 function Main(props) {
   const [journal, setJournal] = useState([])
-  const URL = "http://localhost:3000/journal/"
+  const URL = "https://diary-app.herokuapp.com/"
 
   const getJournal = async () => {
     const response = await fetch(URL)
