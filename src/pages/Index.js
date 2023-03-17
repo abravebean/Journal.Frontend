@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // import { useParams, useNavigate } from "react-router-dom"
 import '../index.css';
 // import { useSelector } from 'react-redux';
-
+import TextField from '@mui/material/TextField';
 
 
 function Index(props) {
@@ -68,28 +68,28 @@ function Index(props) {
      
       <form onSubmit={handleSubmit}>
       <h2 id="logo">Create a log</h2>
-        <input
+      <TextField
           type="text"
           value={newForm.date}
           name="date"
           placeholder="Date"
           onChange={handleChange}
         />
-        <input
+       <TextField
           type="text"
           value={newForm.picture}
           name="picture"
           placeholder="Add a picture"
           onChange={handleChange}
         />
-        <input
+       <TextField
           type="text"
           value={newForm.note}
           name="note"
           placeholder="notes"
           onChange={handleChange}
         />
-        <input type="submit" value="Add Journal" />
+        <TextField type="submit" value="Add Journal" />
       </form>
       {props.journal ? loaded() : loading()}
     </div>
