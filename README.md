@@ -25,6 +25,9 @@ https://main--wondrous-snickerdoodle-89b9e7.netlify.app/
 - Express
 - Node.js
 - Material UI
+- Redux
+- Redux-Thunk
+- Reduxjs/toolKit
 ### Future Enhancements:
 - Enhance styling
 - Better UI

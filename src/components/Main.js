@@ -5,7 +5,14 @@ import { Routes, Route } from "react-router-dom"
 import Index from "../pages/Index.js"
 import Show from "../pages/Show"
 
+import {useSelector }from "react-redux";
+
+
+
 function Main(props) {
+const posts = useSelector((state)=>state.posts);
+console.log(posts)
+
   const [journal, setJournal] = useState([])
   const URL = "https://diary-app.herokuapp.com/journal"
 
