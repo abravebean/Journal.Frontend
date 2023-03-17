@@ -2,6 +2,10 @@
 This is a simple diary app that allows users to create and manage their personal diary entries. It is designed for users who want to keep a daily log of their thoughts, ideas, and experiences.
 ## Backend Link
 https://diary-app.herokuapp.com/
+
+## Frontend Link
+https://main--wondrous-snickerdoodle-89b9e7.netlify.app/
+
 ## Features
 - Create and save diary entries with a date and time stamp.
 - Edit and delete existing entries.
@@ -20,8 +24,6 @@ https://diary-app.herokuapp.com/
 - MongoDB
 - Express
 - Node.js
-- Redux
-- Redux thunk
 - Material UI
 ### Future Enhancements:
 - Enhance styling
