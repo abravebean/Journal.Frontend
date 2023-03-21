@@ -60,10 +60,32 @@ img {
 border: black;
   }
   form{
-
+    border-color: red;
     border-radius:10px;
     padding:30px;
-  	height:auto;
+  
+    height: 20px;
+  }
+  .MuiTextField{
+    max-height: 30px;
+
+  }
+
+  .MuiFormControl-root  {
+    color: #2e8b57;
+    max-height: 30px;
+  }
+  input{
+    max-height: 20px;
+    border-color: red;
+  }
+  .form{
+    max-height: 20px;
+    border-color: red;
+  }
+  #form{
+    max-height: 20px;
+    border-color: red;
   }
   #logo{
     margin:0 auto;

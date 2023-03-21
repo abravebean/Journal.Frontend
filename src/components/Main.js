@@ -10,6 +10,7 @@ import {useSelector }from "react-redux";
 
 
 function Main(props) {
+
 const posts = useSelector((state)=>state.posts);
 console.log(posts)
 
@@ -69,6 +70,7 @@ console.log(posts)
 
   return (
     <main>
+      
       <Routes>
         <Route 
           exact

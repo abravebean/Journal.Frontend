@@ -2,6 +2,7 @@ import React,{ useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import '../index.css';
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 function Show(props) {
   const { id } = useParams()
@@ -43,23 +44,23 @@ function Show(props) {
     <h1>{journal.date}</h1>
     <h2>{journal.note}</h2>
     <img src={journal.picture} alt={journal.picture}/>
-    
+    <div id="form">
     <form onSubmit={handleSubmit}>
-      <input
+    <TextField
         type="text"
         value={editForm.date}
         name="date"
         placeholder="date"
         onChange={handleChange}
       />
-      <input
+     <TextField
         type="text"
         value={editForm.picture}
         name="picture"
         placeholder="picture URL"
         onChange={handleChange}
       />
-      <input
+     <TextField
         type="text"
         value={editForm.note}
         name="note"
@@ -67,12 +68,14 @@ function Show(props) {
         onChange={handleChange}
       />
        
-      <input id="update" type="submit" value="Update Journal" />
+       <TextField id="update" type="submit" value="Update Journal" />
 
       <Button variant="contained" id="delete" onClick={removeJournal}>
       DELETE
       </Button>
     </form>
+    </div>
+
   </div>
 );
 }

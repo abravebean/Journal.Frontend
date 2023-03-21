@@ -64,9 +64,9 @@ function Index(props) {
   }
 
   return (
-    <div>
+    <div id="form">
      
-      <form onSubmit={handleSubmit}>
+      <form id="form" onSubmit={handleSubmit}>
       <h2 id="logo">Create a log</h2>
       <TextField
           type="text"
